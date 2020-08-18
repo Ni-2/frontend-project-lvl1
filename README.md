@@ -13,4 +13,4 @@ My first practice in JavaScript in Hexlet.
 
 ## Run the game Calculator
 
-
+[![asciicast](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN.svg)](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN)
