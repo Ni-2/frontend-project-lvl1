@@ -14,3 +14,8 @@ My first practice in JavaScript in Hexlet.
 ## Run the game Calculator
 
 [![asciicast](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN.svg)](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN)
+
+
+## Run the game Greater Common Divisor
+
+[![asciicast](https://asciinema.org/a/XmHeHnr4KKRcD3L4psONU1B6K.svg)](https://asciinema.org/a/XmHeHnr4KKRcD3L4psONU1B6K)
