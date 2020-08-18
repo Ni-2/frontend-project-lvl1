@@ -7,7 +7,7 @@ export default (func, name) => {
     const usersAnswer = readLineSync.question(`Qwestion: ${question}\nYour answer: `);
     if (usersAnswer === rightAnswer) console.log('Correct!');
     else {
-      console.log(`"${usersAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}"`);
+      console.log(`"${usersAnswer}" is wrong answer ;(. Correct answer was "${rightAnswer}".`);
       console.log(`Let's try again, ${name}!`);
       break;
     }
