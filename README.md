@@ -6,6 +6,11 @@ My first practice in JavaScript in Hexlet.
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>
 
 
-## Install, run
+## Install, run the game IsEven
 
 [![asciicast](https://asciinema.org/a/ws6HIgtg6UV9D7SCf96yjdwRC.svg)](https://asciinema.org/a/ws6HIgtg6UV9D7SCf96yjdwRC)
+
+
+## Run the game Calculator
+
+
