@@ -19,3 +19,8 @@ My first practice in JavaScript in Hexlet.
 ## Run the game Greater Common Divisor
 
 [![asciicast](https://asciinema.org/a/XmHeHnr4KKRcD3L4psONU1B6K.svg)](https://asciinema.org/a/XmHeHnr4KKRcD3L4psONU1B6K)
+
+
+## Run the game Arithmetic Progression
+
+[![asciicast](https://asciinema.org/a/1sseoIZtuu4roSKSDyjH6jdr3.svg)](https://asciinema.org/a/1sseoIZtuu4roSKSDyjH6jdr3)
