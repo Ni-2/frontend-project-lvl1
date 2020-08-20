@@ -7,7 +7,7 @@ export default () => {
 
   let maxNumber = _.max([firstNumber, secondNumber]);
   let minNumber = _.min([firstNumber, secondNumber]);
-  while (true) {
+  for (;;) {
     const tail = maxNumber % minNumber;
     if (tail === 0) return [message, minNumber.toString()];
     if (tail === 1) return [message, '1'];
