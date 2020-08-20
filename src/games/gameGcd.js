@@ -1,8 +1,8 @@
 import _ from 'lodash';
 
-export default () => {
-  const firstNumber = _.random(1, 99);
-  const secondNumber = _.random(1, 99);
+export default (n) => {
+  const firstNumber = _.random(1, n);
+  const secondNumber = _.random(1, n);
   const message = `${firstNumber}, ${secondNumber}`;
 
   let maxNumber = _.max([firstNumber, secondNumber]);

@@ -5,9 +5,9 @@ const randomOperator = (obj) => {
   return entries[_.random(entries.length - 1)];
 };
 
-export default () => {
-  const firstNumber = _.random(99);
-  const secondNumber = _.random(99);
+export default (n) => {
+  const firstNumber = _.random(n);
+  const secondNumber = _.random(n);
   const operators = {
     '+': (a, b) => a + b,
     '-': _.subtract,
