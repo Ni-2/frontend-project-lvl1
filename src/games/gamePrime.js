@@ -15,7 +15,6 @@ export default (n) => {
     }
   }
   const primes = Object.entries(numBoolDict).filter((num) => num[1]).map((pair) => pair[0]);
-  
   const randomNumber = _.random(1, n).toString();
   return [randomNumber, (primes.includes(randomNumber) ? 'yes' : 'no')];
 };
