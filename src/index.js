@@ -1,8 +1,10 @@
 import readLineSync from 'readline-sync';
 
 export default (func, name) => {
-  const rightAnswersNumber = 3;    // Set the number of right answers to win.
-  const numbersUpperBorder = 99;   // Set the upper border of the range of numbers in the games
+  // Set the number of right answers to win.
+  const rightAnswersNumber = 3;
+  // Set the upper border of the range of numbers in the games.
+  const numbersUpperBorder = 99;
   for (let i = 0; i < rightAnswersNumber; i += 1) {
     const [question, rightAnswer] = func(numbersUpperBorder);
     const usersAnswer = readLineSync.question(`Qwestion: ${question}\nYour answer: `);
