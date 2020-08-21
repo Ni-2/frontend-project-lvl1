@@ -5,7 +5,7 @@ import askName from './cli.js';
 const attemptCount = 3;
 // Set the upper border of the range of numbers in the games.
 const numbersUpperBorder = 99;
- 
+// 
 export default (func) => {
   const name = askName();
   for (let i = 0; i < attemptCount; i += 1) {
