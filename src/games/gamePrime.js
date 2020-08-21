@@ -1,5 +1,7 @@
 import _ from 'lodash';
 
+const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 export default (n) => {
   const numbers = _.range(2, n + 1);
   const numBoolDict = numbers.reduce((acc, num) => {
@@ -16,5 +18,5 @@ export default (n) => {
   }
   const primes = Object.entries(numBoolDict).filter((num) => num[1]).map((pair) => pair[0]);
   const randomNumber = _.random(1, n).toString();
-  return [randomNumber, (primes.includes(randomNumber) ? 'yes' : 'no')];
+  return [task, randomNumber, (primes.includes(randomNumber) ? 'yes' : 'no')];
 };
