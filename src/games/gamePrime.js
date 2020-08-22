@@ -2,21 +2,21 @@ import _ from 'lodash';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-export default (n) => {
-  const numbers = _.range(2, n + 1);
-  const numBoolDict = numbers.reduce((acc, num) => {
-    acc[num] = true;
-    return acc;
-  }, {});
-
-  for (let i = 0; i ** 2 <= n; i += 1) {
-    if (numBoolDict[i] === true) {
-      for (let j = i ** 2; j <= n; j += i) {
-        numBoolDict[j] = false;
-      }
+// Based on Sieve of Eratosthenes algorithm.
+const primeNumbers = (limit) => {
+  const numbers = _.range(2, limit + 1);
+  const numBoolDict = numbers.reduce((acc, num) => ({ ...acc, [num]: true }), {});
+  for (let i = 2; i ** 2 <= limit; i += 1) {
+    if (numBoolDict[i]) {
+      for (let j = i ** 2; j <= limit; j += i) numBoolDict[j] = false;
     }
   }
-  const primes = Object.entries(numBoolDict).filter((num) => num[1]).map((pair) => pair[0]);
-  const randomNumber = _.random(1, n).toString();
-  return [task, randomNumber, (primes.includes(randomNumber) ? 'yes' : 'no')];
+  return Object.entries(numBoolDict).filter(([num, bool]) => bool).map(([num, bool]) => +num);
+};
+
+const isPrime = (num) => primeNumbers(num).includes(num);
+
+export default (n) => {
+  const randomNumber = _.random(1, n);
+  return [task, randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };
