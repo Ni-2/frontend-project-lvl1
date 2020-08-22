@@ -11,7 +11,7 @@ const primeNumbers = (limit) => {
       for (let j = i ** 2; j <= limit; j += i) numBoolDict[j] = false;
     }
   }
-  return Object.entries(numBoolDict).filter(([num, bool]) => bool).map(([num, bool]) => +num);
+  return Object.entries(numBoolDict).filter(([, bool]) => bool).map(([num]) => +num);
 };
 
 const isPrime = (num) => primeNumbers(num).includes(num);
