@@ -1,8 +1,9 @@
 import { random } from '../helps.js';
+import index from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-export default (n) => {
+const game = (n) => {
   const firstNumber = random(1, n);
   const secondNumber = random(1, n);
   const message = `${firstNumber}, ${secondNumber}`;
@@ -17,3 +18,5 @@ export default (n) => {
     minNumber = tail;
   }
 };
+
+export default () => index(game);

@@ -1,10 +1,11 @@
 import { random, range } from '../helps.js';
+import index from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
 const progressionLength = 10; // Set the progression length.
 
-export default (n) => {
+const game = (n) => {
   const firstNumber = random(0, n - (progressionLength - 1));
   const upperBorder = random(firstNumber + (progressionLength - 1), n);
   const step = Math.floor((upperBorder - firstNumber) / (progressionLength - 1));
@@ -13,3 +14,5 @@ export default (n) => {
   const answer = arrOfNumbers.splice(index, 1, '..').join('');
   return [task, arrOfNumbers.join(' '), answer];
 };
+
+export default () => index(game);

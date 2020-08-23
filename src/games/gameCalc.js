@@ -1,4 +1,5 @@
 import { random } from '../helps.js';
+import index from '../index.js';
 
 const task = 'What is the result of the expression?';
 
@@ -13,10 +14,12 @@ const randomOperator = () => {
   return Object.entries(operators)[randomIndex];
 };
 
-export default (n) => {
+const game = (n) => {
   const firstNumber = random(0, n);
   const secondNumber = random(0, n);
   const [operSymbol, operation] = randomOperator();
   const rightAnswer = operation(firstNumber, secondNumber);
   return [task, `${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
 };
+
+export default () => index(game);
