@@ -1,22 +1,22 @@
-import _ from 'lodash';
+import { random } from '../helps.js';
 
 const task = 'What is the result of the expression?';
 
 const operators = {
   '+': (a, b) => a + b,
-  '-': _.subtract,
-  '*': _.multiply,
+  '-': (a, b) => a - b,
+  '*': (a, b) => a * b,
 };
 
 const randomOperator = () => {
-  const entries = Object.entries(operators);
-  return entries[_.random(entries.length - 1)];
+  const randomIndex = random(0, Object.keys(operators).length - 1);
+  return Object.entries(operators)[randomIndex];
 };
 
 export default (n) => {
-  const firstNumber = _.random(n);
-  const secondNumber = _.random(n);
-  const operator = randomOperator();
-  const rightAnswer = operator[1](firstNumber, secondNumber);
-  return [task, `${firstNumber} ${operator[0]} ${secondNumber}`, rightAnswer.toString()];
+  const firstNumber = random(0, n);
+  const secondNumber = random(0, n);
+  const [operSymbol, operation] = randomOperator();
+  const rightAnswer = operation(firstNumber, secondNumber);
+  return [task, `${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
 };

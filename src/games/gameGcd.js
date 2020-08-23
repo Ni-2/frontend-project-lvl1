@@ -1,14 +1,14 @@
-import _ from 'lodash';
+import { random } from '../helps.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
 export default (n) => {
-  const firstNumber = _.random(1, n);
-  const secondNumber = _.random(1, n);
+  const firstNumber = random(1, n);
+  const secondNumber = random(1, n);
   const message = `${firstNumber}, ${secondNumber}`;
-
-  let maxNumber = _.max([firstNumber, secondNumber]);
-  let minNumber = _.min([firstNumber, secondNumber]);
+  let [maxNumber, minNumber] = firstNumber >= secondNumber
+    ? [firstNumber, secondNumber]
+    : [secondNumber, firstNumber];
   for (;;) {
     const tail = maxNumber % minNumber;
     if (tail === 0) return [task, message, minNumber.toString()];

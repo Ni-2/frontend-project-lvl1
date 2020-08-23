@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import { random } from '../helps.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -9,6 +9,6 @@ const isPrime = (num) => {
 };
 
 export default (n) => {
-  const randomNumber = _.random(1, n);
+  const randomNumber = random(1, n);
   return [task, randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };

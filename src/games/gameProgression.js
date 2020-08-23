@@ -1,15 +1,15 @@
-import _ from 'lodash';
+import { random, range } from '../helps.js';
 
 const task = 'What number is missing in the progression?';
 
 const progressionLength = 10; // Set the progression length.
 
 export default (n) => {
-  const firstNumber = _.random(n - (progressionLength - 1));
-  const upperBorder = _.random(firstNumber + (progressionLength - 1), n);
-  const step = _.floor((upperBorder - firstNumber) / (progressionLength - 1));
-  const arr = _.range(firstNumber, upperBorder + 1, step).slice(0, progressionLength);
-  const index = _.random(progressionLength - 1);
-  const answer = arr.splice(index, 1, '..').join('');
-  return [task, arr.join(' '), answer];
+  const firstNumber = random(0, n - (progressionLength - 1));
+  const upperBorder = random(firstNumber + (progressionLength - 1), n);
+  const step = Math.floor((upperBorder - firstNumber) / (progressionLength - 1));
+  const arrOfNumbers = range(firstNumber, upperBorder, step).slice(0, progressionLength);
+  const index = random(0, progressionLength - 1);
+  const answer = arrOfNumbers.splice(index, 1, '..').join('');
+  return [task, arrOfNumbers.join(' '), answer];
 };
