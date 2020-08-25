@@ -8,12 +8,12 @@ My first practice in JavaScript in Hexlet.
 
 ## Install, run the game Is Even?
 
-[![asciicast](https://asciinema.org/a/ws6HIgtg6UV9D7SCf96yjdwRC.svg)](https://asciinema.org/a/ws6HIgtg6UV9D7SCf96yjdwRC)
+[![asciicast](https://asciinema.org/a/o5mxV35Gc2KZu68Ybbg44v9k5.svg)](https://asciinema.org/a/o5mxV35Gc2KZu68Ybbg44v9k5)
 
 
 ## Calculator
 
-[![asciicast](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN.svg)](https://asciinema.org/a/kTs2EmL8bTTy0Bzv6wGx04hDN)
+[![asciicast](https://asciinema.org/a/ve5Or7U9hRI1WvNE5u27jfhKY.svg)](https://asciinema.org/a/ve5Or7U9hRI1WvNE5u27jfhKY)
 
 
 ## Greater Common Divisor
