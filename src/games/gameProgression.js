@@ -1,5 +1,5 @@
 import { random, range } from '../helps.js';
-import index from '../index.js';
+import startGameEngine from '../index.js';
 
 const task = 'What number is missing in the progression?';
 const getTask = () => task;
@@ -20,4 +20,4 @@ const genRoundData = () => {
   return [arrOfNumbers.join(' '), rightAnswer];
 };
 
-export default () => index(getTask, genRoundData);
+export default () => startGameEngine(getTask, genRoundData);

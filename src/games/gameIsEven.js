@@ -1,5 +1,5 @@
 import { random } from '../helps.js';
-import index from '../index.js';
+import startGameEngine from '../index.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 const getTask = () => task;
@@ -15,4 +15,4 @@ const genRoundData = () => {
   return [question, rigthAnswer];
 };
 
-export default () => index(getTask, genRoundData);
+export default () => startGameEngine(getTask, genRoundData);

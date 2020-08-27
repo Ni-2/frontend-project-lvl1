@@ -1,5 +1,5 @@
 import { random } from '../helps.js';
-import index from '../index.js';
+import startGameEngine from '../index.js';
 
 const task = 'What is the result of the expression?';
 const getTask = () => task;
@@ -26,4 +26,4 @@ const genRoundData = () => {
   return [`${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
 };
 
-export default () => index(getTask, genRoundData);
+export default () => startGameEngine(getTask, genRoundData);

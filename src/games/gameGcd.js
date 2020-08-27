@@ -1,5 +1,5 @@
 import { random } from '../helps.js';
-import index from '../index.js';
+import startGameEngine from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 const getTask = () => task;
@@ -23,4 +23,4 @@ const genRoundData = () => {
   }
 };
 
-export default () => index(getTask, genRoundData);
+export default () => startGameEngine(getTask, genRoundData);
