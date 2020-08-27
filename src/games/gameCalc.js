@@ -2,6 +2,7 @@ import { random } from '../helps.js';
 import index from '../index.js';
 
 const task = 'What is the result of the expression?';
+const getTask = () => task;
 
 const operators = {
   '+': (a, b) => a + b,
@@ -22,7 +23,7 @@ const genRoundData = () => {
   const secondNumber = random(0, numbersUpperBorder);
   const [operSymbol, operation] = randomOperator();
   const rightAnswer = operation(firstNumber, secondNumber);
-  return [task, `${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
+  return [`${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
 };
 
-export default () => index(genRoundData);
+export default () => index(getTask, genRoundData);

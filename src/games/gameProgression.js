@@ -2,6 +2,7 @@ import { random, range } from '../helps.js';
 import index from '../index.js';
 
 const task = 'What number is missing in the progression?';
+const getTask = () => task;
 
 // Set the progression length.
 const progressionLength = 10;
@@ -15,8 +16,8 @@ const genRoundData = () => {
   const step = Math.floor((upperBorder - firstNumber) / (progressionLength - 1));
   const arrOfNumbers = range(firstNumber, upperBorder, step).slice(0, progressionLength);
   const answerIndex = random(0, progressionLength - 1);
-  const answer = arrOfNumbers.splice(answerIndex, 1, '..').join('');
-  return [task, arrOfNumbers.join(' '), answer];
+  const rightAnswer = arrOfNumbers.splice(answerIndex, 1, '..').join('');
+  return [arrOfNumbers.join(' '), rightAnswer];
 };
 
-export default () => index(genRoundData);
+export default () => index(getTask, genRoundData);

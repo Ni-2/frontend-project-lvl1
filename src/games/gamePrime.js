@@ -2,6 +2,7 @@ import { random } from '../helps.js';
 import index from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const getTask = () => task;
 
 const isPrime = (num) => {
   if (num === 1) return false;
@@ -14,7 +15,7 @@ const numbersUpperBorder = 99;
 
 const genRoundData = () => {
   const randomNumber = random(1, numbersUpperBorder);
-  return [task, randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
+  return [randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };
 
-export default () => index(genRoundData);
+export default () => index(getTask, genRoundData);

@@ -2,6 +2,7 @@ import { random } from '../helps.js';
 import index from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
+const getTask = () => task;
 
 // Set the upper border of the range of numbers in the game.
 const numbersUpperBorder = 99;
@@ -15,11 +16,11 @@ const genRoundData = () => {
     : [secondNumber, firstNumber];
   for (;;) {
     const tail = maxNumber % minNumber;
-    if (tail === 0) return [task, message, minNumber.toString()];
-    if (tail === 1) return [task, message, '1'];
+    if (tail === 0) return [message, minNumber.toString()];
+    if (tail === 1) return [message, '1'];
     maxNumber = minNumber;
     minNumber = tail;
   }
 };
 
-export default () => index(genRoundData);
+export default () => index(getTask, genRoundData);
