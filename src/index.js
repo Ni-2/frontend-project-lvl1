@@ -5,7 +5,7 @@ const attemptCount = 3;
 
 export default (func) => {
   console.log('Welcone to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
+  const name = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
   for (let i = 0; i < attemptCount; i += 1) {
     const [task, question, rightAnswer] = func();
