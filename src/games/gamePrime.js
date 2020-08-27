@@ -12,9 +12,9 @@ const isPrime = (num) => {
 // Set the upper border of the range of numbers in the game.
 const numbersUpperBorder = 99;
 
-const game = () => {
+const genRoundData = () => {
   const randomNumber = random(1, numbersUpperBorder);
   return [task, randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };
 
-export default () => index(game);
+export default () => index(genRoundData);

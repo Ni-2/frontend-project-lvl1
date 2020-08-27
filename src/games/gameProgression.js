@@ -9,7 +9,7 @@ const progressionLength = 10;
 // Set the upper border of the range of numbers in the game.
 const numbersUpperBorder = 99;
 
-const game = () => {
+const genRoundData = () => {
   const firstNumber = random(0, numbersUpperBorder - (progressionLength - 1));
   const upperBorder = random(firstNumber + (progressionLength - 1), numbersUpperBorder);
   const step = Math.floor((upperBorder - firstNumber) / (progressionLength - 1));
@@ -19,4 +19,4 @@ const game = () => {
   return [task, arrOfNumbers.join(' '), answer];
 };
 
-export default () => index(game);
+export default () => index(genRoundData);

@@ -8,9 +8,9 @@ const isEven = (num) => num % 2 === 0;
 // Set the upper border of the range of numbers in the game.
 const numbersUpperBorder = 99;
 
-const game = () => {
+const genRoundData = () => {
   const randomNumber = random(0, numbersUpperBorder);
   return [task, randomNumber, (isEven(randomNumber) ? 'yes' : 'no')];
 };
 
-export default () => index(game);
+export default () => index(genRoundData);

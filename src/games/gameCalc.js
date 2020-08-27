@@ -17,7 +17,7 @@ const randomOperator = () => {
 // Set the upper border of the range of numbers in the game.
 const numbersUpperBorder = 99;
 
-const game = () => {
+const genRoundData = () => {
   const firstNumber = random(0, numbersUpperBorder);
   const secondNumber = random(0, numbersUpperBorder);
   const [operSymbol, operation] = randomOperator();
@@ -25,4 +25,4 @@ const game = () => {
   return [task, `${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
 };
 
-export default () => index(game);
+export default () => index(genRoundData);
