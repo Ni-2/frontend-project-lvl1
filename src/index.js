@@ -1,11 +1,12 @@
 import readLineSync from 'readline-sync';
-import askName from './cli.js';
 
 // Set the number of right answers to win.
 const attemptCount = 3;
 
 export default (func) => {
-  const name = askName();
+  console.log('Welcone to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   for (let i = 0; i < attemptCount; i += 1) {
     const [task, question, rightAnswer] = func();
     if (i === 0) console.log(task);
