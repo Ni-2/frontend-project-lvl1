@@ -14,10 +14,11 @@ const genRoundData = () => {
   const firstNumber = random(0, numbersUpperBorder - (progressionLength - 1));
   const upperBorder = random(firstNumber + (progressionLength - 1), numbersUpperBorder);
   const step = Math.floor((upperBorder - firstNumber) / (progressionLength - 1));
-  const arrOfNumbers = range(firstNumber, upperBorder, step).slice(0, progressionLength);
-  const answerIndex = random(0, progressionLength - 1);
-  const rightAnswer = arrOfNumbers.splice(answerIndex, 1, '..').join('');
-  return [arrOfNumbers.join(' '), rightAnswer];
+  const progression = range(firstNumber, upperBorder, step).slice(0, progressionLength);
+  const rightAnswerIndex = random(0, progressionLength - 1);
+  const rightAnswer = progression.splice(rightAnswerIndex, 1, '..').toString();
+  const question = progression.join(' ');
+  return [question, rightAnswer];
 };
 
 export default () => startGameEngine(getTask, genRoundData);
