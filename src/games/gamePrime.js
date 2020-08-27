@@ -9,8 +9,11 @@ const isPrime = (num) => {
   return true;
 };
 
-const game = (n) => {
-  const randomNumber = random(1, n);
+// Set the upper border of the range of numbers in the game.
+const numbersUpperBorder = 99;
+
+const game = () => {
+  const randomNumber = random(1, numbersUpperBorder);
   return [task, randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };
 

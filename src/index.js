@@ -3,13 +3,11 @@ import askName from './cli.js';
 
 // Set the number of right answers to win.
 const attemptCount = 3;
-// Set the upper border of the range of numbers in the games.
-const numbersUpperBorder = 99;
 
 export default (func) => {
   const name = askName();
   for (let i = 0; i < attemptCount; i += 1) {
-    const [task, question, rightAnswer] = func(numbersUpperBorder);
+    const [task, question, rightAnswer] = func();
     if (i === 0) console.log(task);
     const usersAnswer = readLineSync.question(`Qwestion: ${question}\nYour answer: `);
     if (usersAnswer === rightAnswer) console.log('Correct!');

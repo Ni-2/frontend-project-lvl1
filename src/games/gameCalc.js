@@ -14,9 +14,12 @@ const randomOperator = () => {
   return Object.entries(operators)[randomIndex];
 };
 
-const game = (n) => {
-  const firstNumber = random(0, n);
-  const secondNumber = random(0, n);
+// Set the upper border of the range of numbers in the game.
+const numbersUpperBorder = 99;
+
+const game = () => {
+  const firstNumber = random(0, numbersUpperBorder);
+  const secondNumber = random(0, numbersUpperBorder);
   const [operSymbol, operation] = randomOperator();
   const rightAnswer = operation(firstNumber, secondNumber);
   return [task, `${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];

@@ -5,8 +5,11 @@ const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-const game = (n) => {
-  const randomNumber = random(0, n);
+// Set the upper border of the range of numbers in the game.
+const numbersUpperBorder = 99;
+
+const game = () => {
+  const randomNumber = random(0, numbersUpperBorder);
   return [task, randomNumber, (isEven(randomNumber) ? 'yes' : 'no')];
 };
 

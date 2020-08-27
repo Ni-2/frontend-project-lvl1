@@ -3,9 +3,12 @@ import index from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const game = (n) => {
-  const firstNumber = random(1, n);
-  const secondNumber = random(1, n);
+// Set the upper border of the range of numbers in the game.
+const numbersUpperBorder = 99;
+
+const game = () => {
+  const firstNumber = random(1, numbersUpperBorder);
+  const secondNumber = random(1, numbersUpperBorder);
   const message = `${firstNumber}, ${secondNumber}`;
   let [maxNumber, minNumber] = firstNumber >= secondNumber
     ? [firstNumber, secondNumber]
