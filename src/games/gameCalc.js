@@ -10,9 +10,9 @@ const operators = {
   '*': (a, b) => a * b,
 };
 
-const randomOperator = () => {
+const getRandomOperator = () => {
   const randomIndex = random(0, Object.keys(operators).length - 1);
-  return Object.entries(operators)[randomIndex];
+  return Object.keys(operators)[randomIndex];
 };
 
 // Set the upper border of the range of numbers in the game.
@@ -21,9 +21,11 @@ const numbersUpperBorder = 99;
 const genRoundData = () => {
   const firstNumber = random(0, numbersUpperBorder);
   const secondNumber = random(0, numbersUpperBorder);
-  const [operSymbol, operation] = randomOperator();
-  const rightAnswer = operation(firstNumber, secondNumber);
-  return [`${firstNumber} ${operSymbol} ${secondNumber}`, rightAnswer.toString()];
+  const operator = getRandomOperator();
+  const question = `${firstNumber} ${operator} ${secondNumber}`;
+  const calculate = operators[operator];
+  const rightAnswer = calculate(firstNumber, secondNumber).toString();
+  return [question, rightAnswer];
 };
 
 export default () => startGameEngine(getTask, genRoundData);
