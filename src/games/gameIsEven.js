@@ -2,7 +2,6 @@ import { random } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'Answer "yes" if the number is even, otherwise answer "no".';
-const getTask = () => task;
 
 const isEven = (num) => num % 2 === 0;
 
@@ -15,4 +14,4 @@ const genRoundData = () => {
   return [question, rigthAnswer];
 };
 
-export default () => startGameEngine(getTask, genRoundData);
+export default () => startGameEngine(task, genRoundData);

@@ -3,11 +3,11 @@ import readLineSync from 'readline-sync';
 // Set the number of right answers to win.
 const attemptCount = 3;
 
-export default (getTask, genRoundData) => {
+export default (task, genRoundData) => {
   console.log('Welcone to the Brain Games!');
   const name = readLineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log(getTask());
+  console.log(task);
   for (let i = 0; i < attemptCount; i += 1) {
     const [question, rightAnswer] = genRoundData();
     const usersAnswer = readLineSync.question(`Qwestion: ${question}\nYour answer: `);

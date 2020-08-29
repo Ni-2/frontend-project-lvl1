@@ -2,7 +2,6 @@ import { random } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const getTask = () => task;
 
 const isPrime = (num) => {
   if (num <= 1) return false;
@@ -18,4 +17,4 @@ const genRoundData = () => {
   return [randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
 };
 
-export default () => startGameEngine(getTask, genRoundData);
+export default () => startGameEngine(task, genRoundData);

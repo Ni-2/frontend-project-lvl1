@@ -2,7 +2,6 @@ import { random, range } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'What number is missing in the progression?';
-const getTask = () => task;
 
 // Set the progression length.
 const progressionLength = 10;
@@ -21,4 +20,4 @@ const genRoundData = () => {
   return [question, rightAnswer];
 };
 
-export default () => startGameEngine(getTask, genRoundData);
+export default () => startGameEngine(task, genRoundData);

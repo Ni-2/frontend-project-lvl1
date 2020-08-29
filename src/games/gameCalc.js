@@ -2,7 +2,6 @@ import { random } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'What is the result of the expression?';
-const getTask = () => task;
 
 const operators = {
   '+': (a, b) => a + b,
@@ -28,4 +27,4 @@ const genRoundData = () => {
   return [question, rightAnswer];
 };
 
-export default () => startGameEngine(getTask, genRoundData);
+export default () => startGameEngine(task, genRoundData);
