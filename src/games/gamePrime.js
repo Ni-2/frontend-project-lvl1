@@ -1,4 +1,4 @@
-import { random } from '../helps.js';
+import { genRandomNum } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -13,7 +13,7 @@ const isPrime = (num) => {
 const numbersUpperBorder = 99;
 
 const genRoundData = () => {
-  const question = random(1, numbersUpperBorder);
+  const question = genRandomNum(1, numbersUpperBorder);
   const rightAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, rightAnswer];
 };

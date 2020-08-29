@@ -1,4 +1,4 @@
-import { random } from '../helps.js';
+import { genRandomNum } from '../helps.js';
 import startGameEngine from '../index.js';
 
 const task = 'What is the result of the expression?';
@@ -10,7 +10,7 @@ const operators = {
 };
 
 const getRandomOperator = () => {
-  const randomIndex = random(0, Object.keys(operators).length - 1);
+  const randomIndex = genRandomNum(0, Object.keys(operators).length - 1);
   return Object.keys(operators)[randomIndex];
 };
 
@@ -18,8 +18,8 @@ const getRandomOperator = () => {
 const numbersUpperBorder = 99;
 
 const genRoundData = () => {
-  const firstNumber = random(0, numbersUpperBorder);
-  const secondNumber = random(0, numbersUpperBorder);
+  const firstNumber = genRandomNum(0, numbersUpperBorder);
+  const secondNumber = genRandomNum(0, numbersUpperBorder);
   const operator = getRandomOperator();
   const question = `${firstNumber} ${operator} ${secondNumber}`;
   const calculate = operators[operator];
