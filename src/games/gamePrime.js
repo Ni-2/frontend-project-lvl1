@@ -13,8 +13,9 @@ const isPrime = (num) => {
 const numbersUpperBorder = 99;
 
 const genRoundData = () => {
-  const randomNumber = random(1, numbersUpperBorder);
-  return [randomNumber, (isPrime(randomNumber) ? 'yes' : 'no')];
+  const question = random(1, numbersUpperBorder);
+  const rightAnswer = isPrime(question) ? 'yes' : 'no';
+  return [question, rightAnswer];
 };
 
 export default () => startGameEngine(task, genRoundData);
