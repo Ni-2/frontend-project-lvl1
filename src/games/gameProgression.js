@@ -16,7 +16,8 @@ const genRoundData = () => {
   const progression = genRangeFromToStepWithTo(firstNumber, upperBorder, step)
     .slice(0, progressionLength);
   const rightAnswerIndex = genRandomNum(0, progressionLength - 1);
-  const rightAnswer = progression.splice(rightAnswerIndex, 1, '..').toString();
+  const rightAnswer = progression[rightAnswerIndex].toString();
+  progression[rightAnswerIndex] = '..';
   const question = progression.join(' ');
   return [question, rightAnswer];
 };
