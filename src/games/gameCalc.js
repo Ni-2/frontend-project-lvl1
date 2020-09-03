@@ -8,10 +8,10 @@ const operators = {
   '-': (a, b) => a - b,
   '*': (a, b) => a * b,
 };
-
+const operatorsKeys = Object.keys(operators);
 const getRandomOperator = () => {
   const randomIndex = genRandomNum(0, Object.keys(operators).length - 1);
-  return Object.keys(operators)[randomIndex];
+  return operatorsKeys[randomIndex];
 };
 
 // Set the upper border of the range of numbers in the game.

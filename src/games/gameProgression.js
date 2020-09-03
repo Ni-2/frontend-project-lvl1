@@ -9,8 +9,8 @@ const progressionLength = 10;
 const genRoundData = () => {
   const firstNumber = genRandomNum(0, 99);
   const step = genRandomNum(1, 10);
-  const secondNumber = firstNumber + step * (progressionLength - 1);
-  const progression = genRangeFromToStepWithTo(firstNumber, secondNumber, step);
+  const lastNumber = firstNumber + step * (progressionLength - 1);
+  const progression = genRangeFromToStepWithTo(firstNumber, lastNumber, step);
   const rightAnswerIndex = genRandomNum(0, progressionLength - 1);
   const rightAnswer = progression[rightAnswerIndex].toString();
   progression[rightAnswerIndex] = '..';

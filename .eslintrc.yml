@@ -1,5 +1,4 @@
 env:
-  browser: false
   es2020: true
 extends:
   - airbnb-base
